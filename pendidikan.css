@@ -1,0 +1,124 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins', sans-serif;
+}
+
+body{
+    background: #0c1022;
+    color: #fff;
+}
+
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;  
+    width: 100%;
+    padding: 20px 10%;
+    background: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+  }
+
+.logo{
+    font-size: 27px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 610;
+    pointer-events: none;
+    opacity: 0;
+    animation: slideTop 1s ease forwards;
+}
+
+.navbar a{
+    display: inline-block;
+    font-size: 20px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 550;
+    margin-left: 40px;
+    opacity: 0;
+    animation: slideTop .5s ease forwards;
+    animation-delay: calc(.2s * var(--i));
+}
+
+.navbar a.active,
+.navbar a:hover{
+    background: linear-gradient(50deg, #f06, #3cf);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+}
+
+.box-card{
+    display: flex;
+    padding-top: 100px;
+    justify-content: center;
+    background-color: transparent;
+}
+
+.card-yellow{
+    height: 390px;
+    width: 250px;
+    background-color: yellow;
+    color: #000;
+    border-radius: 20px;
+    box-shadow: 10px 5px;
+    padding: 20px;
+    margin: 30px;
+    text-align: center;
+}
+
+.card-yellow h3{
+    padding: 25px;
+    padding-bottom: 50px;
+}
+
+.card-aqua{
+    height: 390px;
+    width: 250px;
+    background-color: aqua;
+    color: #000;
+    border-radius: 20px;
+    box-shadow: 10px 5px;
+    padding: 20px;
+    margin: 30px;
+    text-align: center;
+}
+
+.card-aqua h3{
+    padding: 25px;
+    padding-bottom: 50px;
+}
+
+.card-palegreen{
+    height: 390px;
+    width: 250px;
+    background-color: palegreen;
+    color: #000;
+    border-radius: 20px;
+    box-shadow: 10px 5px;
+    padding: 20px;
+    margin: 30px;
+    text-align: center;
+}
+
+.card-palegreen h3{
+    padding: 25px;
+    padding-bottom: 50px;
+}
+
+/* KEYFRAMES ANIMATION */
+@keyframes slideTop{
+    0%{
+        opacity: 0;
+        transform: translateY(100px);
+    }
+
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
